@@ -1,0 +1,42 @@
+﻿@model wx092414_SD1.Models.Enrollment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Enrollment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.course.courseTitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.course.courseTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.professor.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.professor.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enrollmentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enrollmentDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.enrollmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
